@@ -1,0 +1,233 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>9jarocks</title>
+    <link rel="stylesheet" href="index.css" />
+    <link rel="stylesheet" href="../FONTAWESOME/css/all.css" />
+</head>
+
+<body class="body" id="body">
+    <header>
+        <div id="current-date" class="date"></div>
+
+        <div class="header-info-logo">
+            <h2 class="logo">9jarocks</h2>
+
+            <div class="navigation">
+                <div class="dropdown">
+                    <a> Nollywood <i class="fa-solid fa-angle-down"></i> </a>
+                    <div class="dropdown-content">
+                        <a> Nollywood Movies</a>
+                        <a> Nollywood Series</a>
+                    </div>
+                </div>
+
+                <div class="dropdown">
+                    <a> Hollywood <i class="fa-solid fa-angle-down"></i> </a>
+                    <div class="dropdown-content">
+                        <a> Hollywood Movies</a>
+                        <a> Hollywood Series</a>
+                    </div>
+                </div>
+
+                <div class="dropdown">
+                    <a> Foreign Movies <i class="fa-solid fa-angle-down"></i> </a>
+                    <div class="dropdown-content">
+                        <a> Other Foreign Movies</a>
+                        <a> Other Foreign Series</a>
+                        <a> Pro Wresting & Fighting Sport </a>
+                        <a> Korean Drama</a>
+                        <a> Anime</a>
+                        <a> Chinese Drama</a>
+                        <a> Filipino Drama</a>
+                        <a> Japanese Drama</a>
+                        <a> Thai Drama</a>
+                    </div>
+                </div>
+
+                <a class="dropdown">Ongoing Series</a>
+                <a class="dropdown"> A-Z</a>
+                <a class="dropdown"> How To Download</a>
+            </div>
+
+            <div class="icons-change">
+                <i class="fa-solid fa-sun light" id="light"></i>
+                <i class="fa-solid fa-moon dark" id="dark"></i>
+                <i class="fa-solid fa-magnifying-glass" id="search"></i>
+            </div>
+        </div>
+    </header>
+    <main class="main">
+        <div class="modal" id="modal">
+            <div class="modal-content">
+                <span id="cancel" class="cancel"> x </span>
+                <div class="input-search">
+                    <input class="first-input" type="text" placeholder="Type and hit Enter" />
+                    <i class="fa-solid fa-magnifying-glass search-icon-in-modal"></i>
+                </div>
+            </div>
+        </div>
+
+        <div class="search-btn">
+            <input placeholder="Search..." type="text" name="search" id="searchInfo" class="searchInfo">
+            <button type="submit" id="search-submit-btn" class="search-submit-btn">Search</button>
+        </div>
+
+        <div class="content-wrapper">
+            <div class="content-notice" id="content-notice">
+                <span class="close-notice" id="close-notice">x</span>
+                <p><strong>Notice! </strong>This website makes use of pop ads which might be annoying to users. Kindly
+                    close any unwanted tab that pops up.</p>
+            </div>
+
+            <div class="content-display">
+                <div class="hot-content" id="hot-content">
+                </div>
+            </div>
+
+            <div class="staff-pick">
+                <div class="staff-pick-clip">
+                    <i class="fa-solid fa-fire-flame-curved fire-icon "></i>
+                    <p>Staff Pick</p>
+                </div>
+                <div class="staff-pick-content" id="staff-pick">
+                </div>
+            </div>
+
+            <div class="nollyMovies">
+                <div class="staff-pick-clip">
+                    <p>Nollywood Movies</p>
+                </div>
+
+                <div class="nollyWood-Movies" id="nollyWood-Movies">
+                </div>
+            </div>
+
+            <div class="nollyseries">
+                <div class="staff-pick-clip">
+                    <p>Nollywood Series</p>
+                </div>
+                <div class="nollyWood-series" id="nolly-series">
+                </div>
+            </div>
+
+            <div class="nollyseries">
+                <div class="staff-pick-clip">
+                    <p>Hollywood Movies</p>
+                </div>
+                <div class="hot-content" id="hollywood-movies">
+                </div>
+            </div>
+
+            <div>
+                <div class="staff-pick-clip">
+                    <p>Hollywood Series</p>
+                </div>
+                <div class="staff-pick-content" id="Hollywood-series">
+                </div>
+            </div>
+
+            <div class="nollyseries">
+                <div class="staff-pick-clip">
+                    <p>Foreign Movies </p>
+                </div>
+                <div class="ForeignMovies" id="ForeignMovies">
+                </div>
+            </div>
+
+            <div class="nollyseries">
+                <div class="staff-pick-clip">
+                    <p>K Drama</p>
+                </div>
+                <div class="nollyWood-series" id="k-drama">
+                </div>
+            </div>
+
+            <div class="nollyMovies">
+                <div class="staff-pick-clip">
+                    <p>Anime</p>
+                </div>
+
+                <div class="nollyWood-Movies" id="anime">
+                </div>
+            </div>
+
+            <div class="nollyseries">
+                <div class="staff-pick-clip">
+                    <p>Other series </p>
+                </div>
+                <div class="ForeignMovies" id="otherSeries">
+                </div>
+            </div>
+
+            <div class="timeline-container">
+                <div class="date-header">
+                    <div class="date-circle">
+                        <span id="month"></span>
+                        <span id="year"></span>
+                    </div>
+                </div>
+                <div class="date-line"></div>
+
+                <div id="auto-timeline"></div>
+            </div>
+
+            <button type="button" class="showmore" id="showmore">Load More</button>
+        </div>
+    </main>
+
+    <footer>
+        <div class="footer-container">
+            <div class="footer-content">
+
+                <div class="popular-content">
+                    <div class="staff-pick-clip black ">
+                        <p>Popular Page </p>
+                    </div>
+                    <ul>
+                        <li> Nollywood Movie</li>
+                        <li> Nollywood Tv Series</li>
+                        <li>Hollywood Tv series</li>
+                        <li>Other Foreign Movies</li>
+                        <li>Other Foreign Series</li>
+                        <li>Korean Drama</li>
+                        <li>Filipino Drama</li>
+                        <li>Pro Wrestling & Fighting Sports</li>
+                        <li>Anime</li>
+                        <li>Japanese Drama</li>
+                        <li>Chinese Drama</li>
+                        <li>Filipino Drama</li>
+                        <li>Japanese Drama</li>
+                        <li>Thai Drama</li>
+                    </ul>
+                </div>
+
+                <div class="popular-content">
+                    <div class="staff-pick-clip black ">
+                        <p>Popular Page </p>
+                    </div>
+                    <ul>
+                        <li class="popular-li"> A-Z</li>
+                        <li class="popular-li">About Us</li>
+                        <li class="popular-li"> Advertisement</li>
+                        <li class="popular-li"> Privacy Policy</li>
+                        <li class="popular-li"> Sponsored Post</li>
+                        <li class="popular-li"> Staff Pick</li>
+                        <li class="popular-li"> Terms And Conditions</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+        <div class="copyright">
+            Master &copy; 2025
+        </div>
+
+    </footer>
+
+    <script src="./index.js"></script>
+</body>
+
+</html>
